@@ -20,9 +20,19 @@
         </div>
         <div class="row">
             <div class="col">
+            </div>
+            <div class="col">
+                <p id="counter"></p>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
                 <div id="addForm">
                     <h3>Add</h3>
-                    <div class="col-sm">
+                    <div class="col"></div>
+                    <div class="col">
                         <div class="">
                             <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
                                 <input type="text" class="form-control" id="add-name" placeholder="Name">
@@ -32,10 +42,11 @@
                                 <input type="text" class="form-control" id="add-color" placeholder="Color">
                                 <input type="text" class="form-control" id="add-season" placeholder="Season">
                                 <input type="submit" value="Add" class="btn btn-primary">
-                                <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+                                <a onclick="closeInput()" class="btn btn-outline-dark">Voltar</a>
                             </form>
                         </div>
                     </div>
+                    <div class="col"></div>
                 </div>
             </div>
         </div>
@@ -43,7 +54,7 @@
             <div class="col">
                 <div id="editForm">
                     <h3>Edit</h3>
-                    <div class="col-sm">
+                    <div class="col-sm-4">
                         <form action="javascript:void(0);" onsubmit="updateItem()">
                             <input type="hidden" class="form-control" id="edit-id">
                             <input type="text" class="form-control" id="edit-name" placeholder="Name">
@@ -53,16 +64,13 @@
                             <input type="text" class="form-control" id="edit-color" placeholder="Color">
                             <input type="text" class="form-control" id="edit-season" placeholder="Season">
                             <input type="submit" value="Save" class="btn-primary">
-                            <a onclick="closeInput()" class="btn btn-primary">Voltar</a>
+                            <a onclick="closeInput()" class="btn btn-outline-dark">Voltar</a>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <p id="counter"></p>
-        </div>
         <div class="row" id="tableItens">
             <div class="col">
                 <table class="table">
@@ -75,7 +83,6 @@
                 </table>
             </div>
         </div>
-
         <div id="details">
             <dl class="row">
                 <dt class="col-lg-2">
@@ -115,7 +122,7 @@
                     <label id="detail-season"></label>
                 </dd>
                 <button onclick="displayEditForm(0)" class="btn btn-primary">Edit</button>
-                <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+                <a onclick="closeInput()" class="btn btn-outline-dark">Voltar</a>
             </dl>
         </div>
 

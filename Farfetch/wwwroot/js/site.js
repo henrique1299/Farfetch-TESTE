@@ -69,6 +69,7 @@ function details(id) {
 
     document.getElementById('details').style.display = 'block';
     document.getElementById('tableItens').style.display = 'none';
+    document.getElementById('btnAdd').style.display = 'none';
 }
 
 function displayEditForm(id) {
@@ -91,6 +92,7 @@ function displayEditForm(id) {
 function displayAddForm() {
     document.getElementById('addForm').style.display = 'block';
     document.getElementById('btnAdd').style.display = 'none';
+    document.getElementById('tableItens').style.display = 'none';
 }
 
 
@@ -151,11 +153,6 @@ function _displayItens(data) {
     const button = document.createElement('button');
 
     data.forEach(item => {
-
-        //let editButton = button.cloneNode(false);
-        //editButton.innerText = 'Edit';
-        //editButton.setAttribute('onclick', `displayEditForm(${item.id})`);
-        //editButton.setAttribute('class', "btn btn-primary");
 
         let deleteButton = button.cloneNode(false);
         deleteButton.innerText = 'Delete';
