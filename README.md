@@ -8,7 +8,8 @@ Farfetch - TESTE - .NET Software Engineer Intern
 2. In `appsettings` change the ConnectionStrings.
 3. In `wwwroot`, add your website files.
 4. Use the `edit-{field}` id for the edit form inputs and `add-{field}` for the add form.
-5. Add the following table to display the itens:  
+5. Use the `detail-{field}` id for the details displays.
+6. Add the following table to display the itens:  
 ```
 <table class="table">
    <tr>
