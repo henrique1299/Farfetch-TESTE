@@ -68,7 +68,7 @@ function details(id) {
     document.getElementById('detail-season').innerHTML = "" + item.season;
 
     document.getElementById('details').style.display = 'block';
-    document.getElementById('btnAdd').style.display = 'none';
+    document.getElementById('tableItens').style.display = 'none';
 }
 
 function displayEditForm(id) {
@@ -84,6 +84,8 @@ function displayEditForm(id) {
 
     document.getElementById('editForm').style.display = 'block';
     document.getElementById('btnAdd').style.display = 'none';
+    document.getElementById('tableItens').style.display = 'none';
+    document.getElementById('details').style.display = 'none';
 }
 
 function displayAddForm() {
@@ -131,6 +133,7 @@ function closeInput() {
     document.getElementById('addForm').style.display = 'none';
     document.getElementById('btnAdd').style.display = 'block';
     document.getElementById('details').style.display = 'none';
+    document.getElementById('tableItens').style.display = 'block';
 }
 
 function _displayCount(itemCount) {
@@ -149,10 +152,10 @@ function _displayItens(data) {
 
     data.forEach(item => {
 
-        let editButton = button.cloneNode(false);
-        editButton.innerText = 'Edit';
-        editButton.setAttribute('onclick', `displayEditForm(${item.id})`);
-        editButton.setAttribute('class', "btn btn-primary");
+        //let editButton = button.cloneNode(false);
+        //editButton.innerText = 'Edit';
+        //editButton.setAttribute('onclick', `displayEditForm(${item.id})`);
+        //editButton.setAttribute('class', "btn btn-primary");
 
         let deleteButton = button.cloneNode(false);
         deleteButton.innerText = 'Delete';
@@ -167,7 +170,8 @@ function _displayItens(data) {
         td2.appendChild(textNode);
 
         let td4 = tr.insertCell(1);
-        td4.appendChild(editButton);
+        let textNode2 = document.createTextNode(item.brandName);
+        td4.appendChild(textNode2);
 
         let td5 = tr.insertCell(2);
         td5.appendChild(deleteButton);
