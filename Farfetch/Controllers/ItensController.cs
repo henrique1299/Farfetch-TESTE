@@ -66,7 +66,14 @@ namespace Farfetch.Controllers
                 l.Add(ItemToDTO(item));
             }
             connection.Close();
-            return l;
+            if (l.Count > 0)
+            {
+                return l;
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
         // GET: api/Itens/5
@@ -190,11 +197,18 @@ namespace Farfetch.Controllers
             String sql = "DELETE FROM Itens WHERE ID=" + id;
             SqlCommand command = new SqlCommand(sql, connection);
             connection.Open();
-            command.ExecuteReader();
-   
-            connection.Close();
-            return NoContent();
-            
+            SqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                connection.Close();
+                return NoContent();
+            }
+            else
+            {
+                connection.Close();
+                return NotFound();
+            }
         }
 
         private static ItemDTO ItemToDTO(Item item) => new ItemDTO
