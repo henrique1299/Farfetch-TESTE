@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Whish List</title>
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+                <h1>Whish List</h1>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="addForm">
+                    <h3>Add</h3>
+                    <div class="col-sm">
+                        <div class="">
+                            <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+                                <input type="text" class="form-control" id="add-name" placeholder="Name">
+                                <input type="text" class="form-control" id="add-material" placeholder="Material">
+                                <input type="text" class="form-control" id="add-brandname" placeholder="Brand Name">
+                                <input type="text" class="form-control" id="add-designer" placeholder="Designer">
+                                <input type="text" class="form-control" id="add-color" placeholder="Color">
+                                <input type="text" class="form-control" id="add-season" placeholder="Season">
+                                <input type="submit" value="Add" class="btn btn-primary">
+                                <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="editForm">
+                    <h3>Edit</h3>
+                    <div class="col-sm">
+                        <form action="javascript:void(0);" onsubmit="updateItem()">
+                            <input type="hidden" class="form-control" id="edit-id">
+                            <input type="text" class="form-control" id="edit-name" placeholder="Name">
+                            <input type="text" class="form-control" id="edit-material" placeholder="Material">
+                            <input type="text" class="form-control" id="edit-brandname" placeholder="Brand Name">
+                            <input type="text" class="form-control" id="edit-designer" placeholder="Designer">
+                            <input type="text" class="form-control" id="edit-color" placeholder="Color">
+                            <input type="text" class="form-control" id="edit-season" placeholder="Season">
+                            <input type="submit" value="Save" class="btn-primary">
+                            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div id="details" style="display:none">
+                    <h3>Details</h3>
+                    <div class="col-sm">
+                        <form>
+                            <input type="hidden" class="form-control" id="detail-id" disabled>
+                            <input type="text" class="form-control" id="detail-name" disabled>
+                            <input type="text" class="form-control" id="detail-material" disabled>
+                            <input type="text" class="form-control" id="detail-brandname" disabled>
+                            <input type="text" class="form-control" id="detail-designer "disabled>
+                            <input type="text" class="form-control" id="detail-color" disabled>
+                            <input type="text" class="form-control" id="detail-season" disabled>
+                            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <p id="counter"></p>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <tr>
+                        <th>Itens</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tbody id="itens"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <input id="btnAdd" value="Add" class="btn btn-primary" onclick="displayAddForm()">
+    </div>
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItens();
+    </script>
+</body>
+</html>
