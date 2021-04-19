@@ -33,3 +33,7 @@ td {
 #counter {
     margin-left: 15px;
 }
+
+tr:hover {
+    background-color: burlywood;
+}

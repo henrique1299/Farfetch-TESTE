@@ -60,13 +60,12 @@ function deleteItem(id) {
 function details(id) {
     const item = itens.find(item => item.id === id);
 
-    document.getElementById('detail-name').value = item.name;
-    document.getElementById('detail-id').value = item.id;
-    document.getElementById('detail-material').value = item.material;
-    document.getElementById('detail-brandname').value = item.brandName;
-    document.getElementById('detail-designer').value = item.designer;
-    document.getElementById('detail-color').value = item.color;
-    document.getElementById('detail-season').value = item.season;
+    document.getElementById('detail-name').innerHTML = "" + item.name;
+    document.getElementById('detail-material').innerHTML = "" + item.material;
+    document.getElementById('detail-brandname').innerHTML = "" + item.brandName;
+    document.getElementById('detail-designer').innerHTML = "" + item.designer;
+    document.getElementById('detail-color').innerHTML = "" + item.color;
+    document.getElementById('detail-season').innerHTML = "" + item.season;
 
     document.getElementById('details').style.display = 'block';
     document.getElementById('btnAdd').style.display = 'none';
@@ -150,11 +149,6 @@ function _displayItens(data) {
 
     data.forEach(item => {
 
-        let detailButton = button.cloneNode(false);
-        detailButton.innerText = 'Details';
-        detailButton.setAttribute('onclick', `details(${item.id})`);
-        detailButton.setAttribute('class', "btn btn-primary");
-
         let editButton = button.cloneNode(false);
         editButton.innerText = 'Edit';
         editButton.setAttribute('onclick', `displayEditForm(${item.id})`);
@@ -166,18 +160,16 @@ function _displayItens(data) {
         deleteButton.setAttribute('class', "btn btn-danger");
 
         let tr = tBody.insertRow();
+        tr.setAttribute('onclick', `details(${item.id})`);
 
         let td2 = tr.insertCell(0);
         let textNode = document.createTextNode(item.name);
         td2.appendChild(textNode);
 
-        let td3 = tr.insertCell(1);
-        td3.appendChild(detailButton);
-
-        let td4 = tr.insertCell(2);
+        let td4 = tr.insertCell(1);
         td4.appendChild(editButton);
 
-        let td5 = tr.insertCell(3);
+        let td5 = tr.insertCell(2);
         td5.appendChild(deleteButton);
   
     });
