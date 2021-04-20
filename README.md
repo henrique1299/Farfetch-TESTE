@@ -80,7 +80,7 @@ primary key(WishId),
 create table  List (
 ItemId int not null,
 WishId int not null,
-FOREIGN KEY (ItemId) REFERENCES [dbo].[Itens](ItemId),
-FOREIGN KEY (WishId) REFERENCES [dbo].[WishLists](WishId)
+FOREIGN KEY (ItemId) REFERENCES Itens(ItemId),
+FOREIGN KEY (WishId) REFERENCES WishLists(WishId)
 )
 ```
