@@ -10,16 +10,16 @@ Farfetch - TESTE - .NET Software Engineer Intern
 
 ## Itens to WishList
 ### Add Item to WishList
-  POST https://{server}:{port}/api/WishLists/{id}/Itens/{id}
+  `POST https://{server}:{port}/api/WishLists/{id}/Itens/{id}`
 
 ### Delete Item from WishList
-  DELETE https://{server}:{port}/api/WishLists/{id}/Itens/{id}
+  `DELETE https://{server}:{port}/api/WishLists/{id}/Itens/{id}`
 
 ### Get Item from WishList
-  GET https://{server}:{port}/api/WishLists/{id}/Itens/{id}
+  `GET https://{server}:{port}/api/WishLists/{id}/Itens/{id}`
 
 ### Get All Itens from WishList
-  GET https://{server}:{port}/api/WishLists/{id}/Itens
+  `GET https://{server}:{port}/api/WishLists/{id}/Itens`
 
 
 ## WishList
