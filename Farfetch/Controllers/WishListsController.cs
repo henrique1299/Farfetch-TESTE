@@ -96,14 +96,14 @@ namespace Farfetch.Controllers
 
             SqlConnection connection = db.connect();
 
-            String sql = "UPDATE WishLists SET Name = '" + wishList.Name + "WHERE WishId=" + id;
+            String sql = "UPDATE WishLists SET Name = '" + wishList.Name + "' WHERE WishId=" + id;
             SqlCommand command = new SqlCommand(sql, connection);
             connection.Open();
             try
             {
                 command.ExecuteReader();
                 connection.Close();
-                return NoContent();
+                return Ok();
             }
             catch
             {

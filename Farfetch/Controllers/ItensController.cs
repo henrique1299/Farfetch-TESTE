@@ -106,7 +106,7 @@ namespace Farfetch.Controllers
             SqlConnection connection = db.connect();
 
             String sql = "UPDATE Itens SET Name = '" + item.Name + "', Material='" + item.Material + "', BrandName='" + item.BrandName + "', Designer='" + item.Designer + 
-                "', Color='" + item.Color + "', Season='" + item.Season + "'" + "WHERE ItemId=" + id;
+                "', Color='" + item.Color + "', Season='" + item.Season + "'" + " WHERE ItemId=" + id;
             SqlCommand command = new SqlCommand(sql, connection);
             connection.Open();
             try
