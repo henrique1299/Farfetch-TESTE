@@ -10,40 +10,37 @@ using System.Data.SqlClient;
 
 namespace Farfetch.Controllers
 {
-    [Route("api/Itens")]
+    [Route("api/[controller]")]
     [ApiController]
-    public class ItensController : ControllerBase
+    public class WishListsController : ControllerBase
     {
-        private readonly FarfetchContext _context;
         DB db = new DB();
-        public ItensController(FarfetchContext context)
+
+        private readonly FarfetchContext _context;
+
+        public WishListsController(FarfetchContext context)
         {
             _context = context;
         }
 
-        // GET: api/Itens
+        // GET: api/WishLists
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Item>>> GetItens()
+        public async Task<ActionResult<IEnumerable<WishList>>> GetWishList()
         {
-            List<Item> l = new List<Item>();
+            List<WishList> l = new List<WishList>();
 
             SqlConnection connection = db.connect();
 
-            String sql = "SELECT * FROM Itens";
+            String sql = "SELECT * FROM WishLists";
             SqlCommand command = new SqlCommand(sql, connection);
             connection.Open();
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                var item = new Item
+                var item = new WishList
                 {
-                    ItemId = reader.GetInt32(0),
-                    Name = reader.GetString(1),
-                    Material = reader.GetString(2),
-                    BrandName = reader.GetString(3),
-                    Designer = reader.GetString(4),
-                    Color = reader.GetString(5),
-                    Season = reader.GetString(6)
+                    WishId = reader.GetInt32(0),
+                    Name = reader.GetString(1)
                 };
                 l.Add(item);
             }
@@ -58,27 +55,22 @@ namespace Farfetch.Controllers
             }
         }
 
-        // GET: api/Itens/5
+        // GET: api/WishLists/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Item>> GetItem(int id)
+        public async Task<ActionResult<WishList>> GetWishList(int id)
         {
             SqlConnection connection = db.connect();
 
-            String sql = "SELECT * FROM Itens WHERE ItemId=" + id;
+            String sql = "SELECT * FROM WishLists WHERE WishId=" + id;
             SqlCommand command = new SqlCommand(sql, connection);
             connection.Open();
             SqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
             {
-                var item = new Item
+                var item = new WishList
                 {
-                    ItemId = reader.GetInt32(0),
-                    Name = reader.GetString(1),
-                    Material = reader.GetString(2),
-                    BrandName = reader.GetString(3),
-                    Designer = reader.GetString(4),
-                    Color = reader.GetString(5),
-                    Season = reader.GetString(6)
+                    WishId = reader.GetInt32(0),
+                    Name = reader.GetString(1)
                 };
                 connection.Close();
                 return item;
@@ -90,13 +82,12 @@ namespace Farfetch.Controllers
             }
         }
 
-        //UPDATE
-        // PUT: api/Itens/5
+        // PUT: api/WishLists/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutItem(int id, Item item)
+        public async Task<IActionResult> PutWishList(int id, WishList wishList)
         {
-            if (id != item.ItemId)
+            if (id != wishList.WishId)
             {
                 return BadRequest();
             }
@@ -105,41 +96,37 @@ namespace Farfetch.Controllers
 
             SqlConnection connection = db.connect();
 
-            String sql = "UPDATE Itens SET Name = '" + item.Name + "', Material='" + item.Material + "', BrandName='" + item.BrandName + "', Designer='" + item.Designer + 
-                "', Color='" + item.Color + "', Season='" + item.Season + "'" + "WHERE ItemId=" + id;
+            String sql = "UPDATE WishLists SET Name = '" + wishList.Name + "WHERE WishId=" + id;
             SqlCommand command = new SqlCommand(sql, connection);
             connection.Open();
             try
             {
                 command.ExecuteReader();
                 connection.Close();
-                return Ok();    
+                return NoContent();
             }
             catch
             {
                 connection.Close();
                 return NotFound();
             }
-
         }
 
-        //INSERT
-        // POST: api/Itens
+        // POST: api/WishLists
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Item>> PostItem(Item item)
+        public async Task<ActionResult<WishList>> PostWishList(WishList wishList)
         {
             SqlConnection connection = db.connect();
 
-            String sql = "INSERT INTO Itens (Name, Material, BrandName, Designer, Color, Season) VALUES ('" + item.Name + "', '" + item.Material + "', '" + item.BrandName + "', '" +
-                           item.Designer + "', '" + item.Color + "', '" + item.Season + "' )";
+            String sql = "INSERT INTO WishLists (Name) VALUES ('" + wishList.Name + "' )";
             SqlCommand command = new SqlCommand(sql, connection);
             connection.Open();
             try
             {
                 command.ExecuteReader();
                 connection.Close();
-                return CreatedAtAction(nameof(GetItem), new { id = item.ItemId }, item);
+                return CreatedAtAction(nameof(GetWishList), new { id = wishList.WishId }, wishList);
             }
             catch
             {
@@ -148,25 +135,24 @@ namespace Farfetch.Controllers
             }
         }
 
-        // DELETE: api/Itens/5
+        // DELETE: api/WishLists/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteItem(int id)
+        public async Task<IActionResult> DeleteWishList(int id)
         {
             SqlConnection connection = db.connect();
 
-            String sql1 = "DELETE FROM List WHERE ItemId = " + id + "; " + 
-                          "DELETE FROM Itens WHERE ItemId=" + id;
+            String sql1 = "DELETE FROM List WHERE WishID = " + id + "; " +
+                          "DELETE FROM WishLists WHERE WishId=" + id;
 
             SqlCommand command1 = new SqlCommand(sql1, connection);
-
             connection.Open();
             try
             {
                 command1.ExecuteReader();
 
                 connection.Close();
-                return Ok();
-                
+                return NoContent();
+
             }
             catch
             {

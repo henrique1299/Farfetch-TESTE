@@ -140,7 +140,6 @@ C:\Users\User\source\repos\henrique1299\Farfetch-TESTE-\Farfetch\bin\Debug\net5.
 C:\Users\User\source\repos\henrique1299\Farfetch-TESTE-\Farfetch\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
 C:\Users\User\source\repos\henrique1299\Farfetch-TESTE-\Farfetch\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\User\source\repos\henrique1299\Farfetch-TESTE-\Farfetch\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\User\Source\Repos\henrique1299\Farfetch-TESTE\Farfetch\obj\Debug\net5.0\Farfetch.csprojAssemblyReference.cache
 C:\Users\User\Source\Repos\henrique1299\Farfetch-TESTE\Farfetch\obj\Debug\net5.0\Farfetch.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\Source\Repos\henrique1299\Farfetch-TESTE\Farfetch\obj\Debug\net5.0\Farfetch.AssemblyInfoInputs.cache
 C:\Users\User\Source\Repos\henrique1299\Farfetch-TESTE\Farfetch\obj\Debug\net5.0\Farfetch.AssemblyInfo.cs
@@ -282,3 +281,4 @@ C:\Users\User\Source\Repos\henrique1299\Farfetch-TESTE\Farfetch\obj\Debug\net5.0
 C:\Users\User\Source\Repos\henrique1299\Farfetch-TESTE\Farfetch\obj\Debug\net5.0\Farfetch.RazorTargetAssemblyInfo.cache
 C:\Users\User\Source\Repos\henrique1299\Farfetch-TESTE\Farfetch\obj\Debug\net5.0\Farfetch.csproj.CopyComplete
 C:\Users\User\Source\Repos\henrique1299\Farfetch-TESTE\Farfetch\obj\Debug\net5.0\Farfetch.genruntimeconfig.cache
+C:\Users\User\source\repos\henrique1299\Farfetch-TESTE\Farfetch\obj\Debug\net5.0\Farfetch.csprojAssemblyReference.cache

@@ -27,7 +27,9 @@ namespace Farfetch
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Farfetch", Version = "v1" });
-            });
+            }); 
+
+            services.AddSwaggerGen();
 
 
         }
@@ -39,7 +41,11 @@ namespace Farfetch
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Farfetch v1"));
+                app.UseSwaggerUI(c =>
+                {
+                    string swaggerJsonBasePath = string.IsNullOrWhiteSpace(c.RoutePrefix) ? "." : "..";
+                    c.SwaggerEndpoint($"{swaggerJsonBasePath}/swagger/v1/swagger.json", "My API");
+                });
             }
 
             app.UseDefaultFiles();
