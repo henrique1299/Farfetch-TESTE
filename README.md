@@ -24,36 +24,36 @@ Farfetch - TESTE - .NET Software Engineer Intern
 
 ## WishList
 ### Create WishList
-  POST https://{server}:{port}/api/WishLists
+  `POST https://{server}:{port}/api/WishLists`
 
 ### Edit WishList
-  PUT https://{server}:{port}/api/WishLists/{id}
+  `PUT https://{server}:{port}/api/WishLists/{id}`
 
 ### Delete WishList
-  DELETE https://{server}:{port}/api/WishLists/{id}
+  `DELETE https://{server}:{port}/api/WishLists/{id}`
 
 ### Get WishList
-  GET https://{server}:{port}/api/WishLists/{id}
+  `GET https://{server}:{port}/api/WishLists/{id}`
 
 ### Get All WishLists
-  GET https://{server}:{port}/api/WishLists
+  `GET https://{server}:{port}/api/WishLists`
 
 
-##Item
+## Item
 ### Create Item
-  POST https://{server}:{port}/api/Itens
+  `POST https://{server}:{port}/api/Itens`
 
 ### Edit Item
-  PUT https://{server}:{port}/api/Itens/{id}
+  `PUT https://{server}:{port}/api/Itens/{id}`
 
 ### Delete Item
-  DELETE https://{server}:{port}/api/Itens/{id}
+  `DELETE https://{server}:{port}/api/Itens/{id}`
 
 ### Get Item
-  GET https://{server}:{port}/api/Itens/{id}
+  `GET https://{server}:{port}/api/Itens/{id}`
 
 ### Get All Itens
-  GET https://{server}:{port}/api/Itens
+  `GET https://{server}:{port}/api/Itens`
   
   
 # DataBase Structure
