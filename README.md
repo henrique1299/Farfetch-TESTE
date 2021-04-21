@@ -31,7 +31,7 @@ Farfetch - TESTE - .NET Software Engineer Intern
   `POST https://{server}:{port}/api/WishLists`
 
 ### Edit WishList
-  `PUT https://{server}:{port}/api/WishLists/{id}`
+  `PUT https://{server}:{port}/api/WishLists`
 
 ### Delete WishList
   `DELETE https://{server}:{port}/api/WishLists/{id}`
@@ -48,7 +48,7 @@ Farfetch - TESTE - .NET Software Engineer Intern
   `POST https://{server}:{port}/api/Itens`
 
 ### Edit Item
-  `PUT https://{server}:{port}/api/Itens/{id}`
+  `PUT https://{server}:{port}/api/Itens`
 
 ### Delete Item
   `DELETE https://{server}:{port}/api/Itens/{id}`
