@@ -1,5 +1,5 @@
 # Farfetch-TESTE
-Farfetch - TESTE - .NET Software Engineer Intern
+Farfetch - TESTE - .NET Software Engineer Intern - Henrique Martins Furtado
 1. Farfetch is the API project
 2. Test it Online: https://farfetch20210420192642.azurewebsites.net/swagger/index.html
 3. Anagram contain the Anagram class
