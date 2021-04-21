@@ -1,7 +1,7 @@
 # Anagram
 
 ## Installation
-1. Copy the `Anagram.java` class in `src` folder to your project folder.
+1. Copy the `Anagram.java` class from `src` folder to your project folder.
 2. Change the `Anagram` package to match the project.
 3. Call using
 ``
