@@ -1,7 +1,9 @@
 # Farfetch-TESTE
 Farfetch - TESTE - .NET Software Engineer Intern
+1. Farfetch is the API project
+2. Test it Online: https://farfetch20210420192642.azurewebsites.net/swagger/index.html
+3. Anagram contain the Anagram class
 
-Test it Online: https://farfetch20210420192642.azurewebsites.net/swagger/index.html
 
 # Installation
 
@@ -29,7 +31,7 @@ Test it Online: https://farfetch20210420192642.azurewebsites.net/swagger/index.h
   `POST https://{server}:{port}/api/WishLists`
 
 ### Edit WishList
-  `PUT https://{server}:{port}/api/WishLists/{id}`
+  `PUT https://{server}:{port}/api/WishLists`
 
 ### Delete WishList
   `DELETE https://{server}:{port}/api/WishLists/{id}`
@@ -46,7 +48,7 @@ Test it Online: https://farfetch20210420192642.azurewebsites.net/swagger/index.h
   `POST https://{server}:{port}/api/Itens`
 
 ### Edit Item
-  `PUT https://{server}:{port}/api/Itens/{id}`
+  `PUT https://{server}:{port}/api/Itens`
 
 ### Delete Item
   `DELETE https://{server}:{port}/api/Itens/{id}`

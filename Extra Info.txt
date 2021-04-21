@@ -1,2 +1,0 @@
-Farfetch is the API;
-Anagram is the anagram function;

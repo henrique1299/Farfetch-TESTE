@@ -1,7 +1,7 @@
 # Anagram
 
 ## Installation
-1. Copy the `Anagram.java` class to your project folder.
+1. Copy the `Anagram.java` class from `src` folder to your project folder.
 2. Change the `Anagram` package to match the project.
 3. Call using
 ``
@@ -12,4 +12,4 @@ boolean b = anagram.isAnagram (string1, string2);
 
 ## How to use
 1. Open the project in your IDE.
-2. Run `Main.java`
+2. Run `Main.java` in the `src` folder
