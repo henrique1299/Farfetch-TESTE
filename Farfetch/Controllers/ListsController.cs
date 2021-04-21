@@ -105,11 +105,11 @@ namespace Farfetch.Controllers
 
         // PUT: api/WishLists/5/Itens/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{WishId}/Itens/{ItemId}")]
-        public async Task<IActionResult> PutList(int WishId, int ItenId)
+        /*[HttpPut("{WishId}/Itens/{ItemId}")]
+        public async Task<IActionResult> PutList(int WishId, int ItemId)
         {
             return BadRequest();
-        }
+        } */
 
         // POST: api/WishLists/5/Itens/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

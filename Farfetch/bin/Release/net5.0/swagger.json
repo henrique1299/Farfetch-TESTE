@@ -206,37 +206,6 @@
           }
         }
       },
-      "put": {
-        "tags": [
-          "Lists"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "WishId",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "ItenId",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "path",
-            "name": "ItemId",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
       "post": {
         "tags": [
           "Lists"

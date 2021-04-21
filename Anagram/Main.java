@@ -6,14 +6,15 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("String 1:");
-        String str1 = scan.next();
+        String str1 = scan.nextLine();
+        
         System.out.println("String 2:");
-        String str2 = scan.next();
-        scan.close();
+        String str2 = scan.nextLine();
 
         Anagram anagram = new Anagram ();
-
+        
         System.out.println("Is Anagram: " + anagram.isAnagram(str1, str2));
+       // scan.close();
 
     }
 }
