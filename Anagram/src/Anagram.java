@@ -1,3 +1,5 @@
+package src;
+
 public class Anagram
 {
     
@@ -8,12 +10,12 @@ public class Anagram
 
     public boolean isAnagram(String s1, String s2)
     {
-        char[] S1 = removeRepetido(s1);
-        char[] S2 = removeRepetido(s2);
+        char[] char1 = removeRepetido(s1);
+        char[] char2 = removeRepetido(s2);
 
-        if (S1.length == S2.length && s1.length() == s2.length())
+        if (char1.length == char2.length && s1.length() == s2.length())
         {
-            boolean anagram = checkAnagram(S1, S2);
+            boolean anagram = checkAnagram(char1, char2);
             
             if (anagram)
                 return true;
@@ -42,15 +44,15 @@ public class Anagram
         }
         return s.toCharArray();
     }
-    public boolean checkAnagram(char[] S1, char[] S2)
+    public boolean checkAnagram(char[] char1, char[] char2)
     {
         int cont;
-        for (int i = 0; i < S1.length; i++)
+        for (int i = 0; i < char1.length; i++)
         {
             cont = 0;
-            for (int j = 0; j < S2.length; j++)
+            for (int j = 0; j < char2.length; j++)
             {
-                if (S1[i] == S2[j])
+                if (char1[i] == char2[j])
                 {
                     cont++;
                 }

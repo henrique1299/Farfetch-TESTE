@@ -1,3 +1,5 @@
+package src;
+
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +16,7 @@ public class Main {
         Anagram anagram = new Anagram ();
         
         System.out.println("Is Anagram: " + anagram.isAnagram(str1, str2));
-       // scan.close();
+        scan.close();
 
     }
 }
