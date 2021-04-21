@@ -282,3 +282,8 @@ C:\Users\User\Source\Repos\henrique1299\Farfetch-TESTE\Farfetch\obj\Debug\net5.0
 C:\Users\User\Source\Repos\henrique1299\Farfetch-TESTE\Farfetch\obj\Debug\net5.0\Farfetch.csproj.CopyComplete
 C:\Users\User\Source\Repos\henrique1299\Farfetch-TESTE\Farfetch\obj\Debug\net5.0\Farfetch.genruntimeconfig.cache
 C:\Users\User\source\repos\henrique1299\Farfetch-TESTE\Farfetch\obj\Debug\net5.0\Farfetch.csprojAssemblyReference.cache
+C:\Users\User\source\repos\henrique1299\Farfetch-TESTE\Farfetch\bin\Debug\net5.0\Azure.Core.dll
+C:\Users\User\source\repos\henrique1299\Farfetch-TESTE\Farfetch\bin\Debug\net5.0\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
+C:\Users\User\source\repos\henrique1299\Farfetch-TESTE\Farfetch\bin\Debug\net5.0\Azure.Identity.dll
+C:\Users\User\source\repos\henrique1299\Farfetch-TESTE\Farfetch\bin\Debug\net5.0\Azure.Security.KeyVault.Secrets.dll
+C:\Users\User\source\repos\henrique1299\Farfetch-TESTE\Farfetch\bin\Debug\net5.0\Microsoft.Identity.Client.Extensions.Msal.dll
