@@ -5,7 +5,7 @@
 2. Change the `Anagram` package to match the project.
 3. Call using
 ``
-Anagram anagram = new anagram ();
+Anagram anagram = new Anagram();
 boolean b = anagram.isAnagram (string1, string2);
 ``
 4. This method will return true if it is an anagram and false if it is not.
