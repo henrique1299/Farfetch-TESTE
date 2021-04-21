@@ -82,21 +82,14 @@ namespace Farfetch.Controllers
             }
         }
 
-        // PUT: api/WishLists/5
+        // PUT: api/WishLists
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutWishList(int id, WishList wishList)
+        [HttpPut]
+        public async Task<IActionResult> PutWishList(WishList wishList)
         {
-            if (id != wishList.WishId)
-            {
-                return BadRequest();
-            }
-
-            //List<ItemDTO> l = new List<ItemDTO>();
-
             SqlConnection connection = db.connect();
 
-            String sql = "UPDATE WishLists SET Name = '" + wishList.Name + "' WHERE WishId=" + id;
+            String sql = "UPDATE WishLists SET Name = '" + wishList.Name + "' WHERE WishId=" + wishList.WishId;
             SqlCommand command = new SqlCommand(sql, connection);
             connection.Open();
             try

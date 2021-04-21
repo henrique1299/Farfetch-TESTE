@@ -91,22 +91,15 @@ namespace Farfetch.Controllers
         }
 
         //UPDATE
-        // PUT: api/Itens/5
+        // PUT: api/Itens
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutItem(int id, Item item)
+        [HttpPut]
+        public async Task<IActionResult> PutItem(Item item)
         {
-            if (id != item.ItemId)
-            {
-                return BadRequest();
-            }
-
-            //List<ItemDTO> l = new List<ItemDTO>();
-
             SqlConnection connection = db.connect();
 
             String sql = "UPDATE Itens SET Name = '" + item.Name + "', Material='" + item.Material + "', BrandName='" + item.BrandName + "', Designer='" + item.Designer + 
-                "', Color='" + item.Color + "', Season='" + item.Season + "'" + " WHERE ItemId=" + id;
+                "', Color='" + item.Color + "', Season='" + item.Season + "'" + " WHERE ItemId=" + item.ItemId;
             SqlCommand command = new SqlCommand(sql, connection);
             connection.Open();
             try
