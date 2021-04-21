@@ -1,6 +1,8 @@
 # Farfetch-TESTE
 Farfetch - TESTE - .NET Software Engineer Intern
 
+Test it Online: https://farfetch20210420192642.azurewebsites.net/swagger/index.html
+
 # Installation
 
 1. In the `DB.cs` change the database connection info.
