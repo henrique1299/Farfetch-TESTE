@@ -1,6 +1,7 @@
 # Farfetch-TESTE
 Farfetch - TESTE - .NET Software Engineer Intern
-
+1. Farfetch is the API project
+2. Anagram contain the Anagram class
 Test it Online: https://farfetch20210420192642.azurewebsites.net/swagger/index.html
 
 # Installation
