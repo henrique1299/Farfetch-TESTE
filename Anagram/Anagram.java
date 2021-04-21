@@ -1,14 +1,12 @@
 public class Anagram
 {
-    private String s1;
-    private String s2;
-    public Anagram(String s1, String s2)
+    
+    public Anagram()
     {
-        this.s1 = s1;
-        this.s2 = s2;
+
     }
 
-    public boolean isAnagram()
+    public boolean isAnagram(String s1, String s2)
     {
         char[] S1 = removeRepetido(s1);
         char[] S2 = removeRepetido(s2);

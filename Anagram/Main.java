@@ -11,9 +11,9 @@ public class Main {
         String str2 = scan.next();
         scan.close();
 
-        Anagram anagram = new Anagram (str1, str2);
+        Anagram anagram = new Anagram ();
 
-        System.out.println("Is Anagram: " + anagram.isAnagram());
+        System.out.println("Is Anagram: " + anagram.isAnagram(str1, str2));
 
     }
 }
