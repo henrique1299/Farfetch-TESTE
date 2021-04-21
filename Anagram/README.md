@@ -1,14 +1,15 @@
-## Getting Started
+# Anagram
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Installation
+1. Copy the `Anagram.java` class to your project folder.
+2. Change the `Anagram` package to match the project.
+3. Call using
+``
+Anagram anagram = new Anagram();
+boolean b = anagram.isAnagram (string1, string2);
+``
+4. This method will return true if it is an anagram and false if it is not.
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-## Dependency Management
-
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+## How to use
+1. Open the project in your IDE.
+2. Run `Main.java`
