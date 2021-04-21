@@ -56,7 +56,8 @@ Test it Online: https://farfetch20210420192642.azurewebsites.net/swagger/index.h
 
 ### Get All Itens
   `GET https://{server}:{port}/api/Itens`
-  
+ 
+ Notice that you can't change an Item Id. Server will return error if you try it.
   
 # DataBase Structure
 ```
